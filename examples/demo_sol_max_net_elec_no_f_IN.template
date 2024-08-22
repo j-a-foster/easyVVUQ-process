@@ -78,9 +78,9 @@ ixc = 44 * fvsbrnni
 * ixc = 49 * fstrcond
 * ixc = 50 * fiooic
 boundu(50) = 1.0
-* ixc = 51 * fvdump
-ixc = 52 * vdalw
-boundu(52) = 10.0
+ixc = 51 * fvdump
+*ixc = 52 * vdalw
+*boundu(52) = 10.0
 * ixc = 53 * fjprot
 * ixc = 54 * ftmargtf
 ixc = 56 * tdmptf
@@ -183,7 +183,7 @@ flhthresh = 1.575 * f-value for L-H power threshold (`constraint equation 15`, `
 * ftburn   = 1.0 * f-value for minimum burn time (`constraint equation 13`, `iteration variable 21`)
 * ftmargoh = 0.29975 * f-value for central solenoid temperature margin
 * ftmargtf = 0.24667 * f-value for TF coil temperature margin (`constraint equation 36`, `iteration variable 54`)
-* fvdump   = 1.0 * f-value for dump voltage (`constraint equation 34`; `iteration variable 51`)
+fvdump   = 1.0 * f-value for dump voltage (`constraint equation 34`; `iteration variable 51`)
 * fwalld   = 0.56327 * f-value for maximum wall load (`constraint equation 8`; `iteration variable 14`)
 pnetelin = 500.0 * required net electric power (MW) (`constraint equation 16`)
 powfmax  = 2500 * maximum fusion power (MW) (`constraint equation 9`)
@@ -199,7 +199,7 @@ taulimit = 5.0 * Lower limit on taup/taueff the ratio of alpha particle to energ
 *------------------Cost Variables------------------*
 
 cfactr   = 0.75 * Total plant availability fraction; input if `iavail=0`
-cost_model = 0 * Switch for cost model;
+cost_model = 2 * Switch for cost model;
 iavail   = 0 * Switch for plant availability model;
 output_costs = 0 * Switch for costs output;
 
@@ -601,3 +601,4 @@ triang   = $triang * Plasma separatrix triangularity (calculated if ishape=1; 3 
 sig_tf_wp_max    = $sig_tf_wp_max * Allowable maximum shear stress in TF coil conduit (Tresca criterion) (Pa)
 peakfactrad = $peakfactrad
 feffcd = $feffcd
+startupratio = $startupratio
